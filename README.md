@@ -16,7 +16,15 @@ OICue helps you:
 All processing happens in your browser. Your files never leave your machine.
 
 ---
+## Report issues & requests
 
+This repository is the official place to:
+- Report bugs
+- Request new features or improvements
+- Ask questions about OICue
+
+→ **[Open a new issue](https://github.com/jherreria/oicue_tracking/issues/new/choose)**
+---
 ## Features
 
 - Multi-file support (drop several IAR/CAR at once)
