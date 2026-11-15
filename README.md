@@ -41,7 +41,7 @@ All processing happens in your browser. Your files never leave your machine.
 ## Trial & Support
 
 This project is under a trial license until **January 31, 2027**.  
-See [LICENSE](LICENSE).
+See [LICENSE](LICENSE.txt).
 
 For licensing or support, contact [Jorge Herreria](https://www.linkedin.com/in/jherreria/).
 
