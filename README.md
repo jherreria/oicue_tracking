@@ -1,69 +1,50 @@
 # OICue
 
-**OICue** is your sanity-saving companion for Oracle® Integrations (OIC) developers. Tired of deciphering integrations left behind by that "other guy"? OICue prevents stream-of-curse-word symphonies during integrations maintenance and monitor-smashing meltdowns. It parses the IAR/CAR and spits out clean OICue pseudo-code representation in a YAML (or JSON) file to turbocharge your understanding of existing integrations, speed up code reviews, find where that variable is being updated/referenced, etc; all these faster than any Formula 1 car.
+> Your sanity-saving companion for ORCLE® Integrations (OIC)
+
+**OICue** turns opaque IAR/CAR files into clean, readable psudo-code YAML (or JSON) so you can actually understand what that integration is doing — without the usual stream-of-curse-word symphony or monitor-smashing meltdown.
+
+Tired of reverse-engineering integrations left behind by “the other guy”?  
+OICue helps you:
+- Understand existing integrations faster than opening the OIC designer
+- Speed up code reviews
+- Find where variables are set or referenced
+- See the all actions and its attributes; no more clicks to see one.
+
+**Live web app → [oicue.vercel.app](https://oicue.vercel.app/)**
+
+All processing happens in your browser. Your files never leave your machine.
+
+---
+
+## Features
+
+- Multi-file support (drop several IAR/CAR at once)
+- YAML or JSON output
+- Schema handling: inline / catalog / sidecar / omit
+- Preview, copy, individual download, or ZIP of everything
 
 
-**Web app:** [oicue.vercel.app](https://oicue.vercel.app/).
+## Supported orchestration elements
 
-OICue 
-## Actions coverage
+`activityStreamLogger` · `assignment` · `callout` · `catch` · `catchAll` · `data stitch` · `ehStop` · `for` · `globalTry` · `globalVariable` · `integrationProperties` · `invoke` · `map` · `note` · `notification` · `parallel` · `parallelBranch` · `pick` · `pickReceive` · `publish` · `receive` · `reply` · `route` · `scheduleReceive` · `stageFile` · `stop` · `subscribe` · `switch` · `throw` · `try` · `wait` · `while`
 
-Parsers orchestration element types. 
-- `activityStreamLogger`
-- `assignment`
-- `callout`
-- `catch`
-- `catchAll`
-- `data stitch`
-- `ehStop`
-- `for`
-- `globalTry`
-- `globalVariable`
-- `integrationProperties`
-- `invoke`
-- `map`
-- `note`
-- `notification`
-- `parallel`
-- `parallelBranch`
-- `pick`
-- `pickReceive`
-- `publish`
-- `receive`
-- `reply`
-- `route`
-- `scheduleReceive`
-- `stageFile`
-- `stop`
-- `subscribe`
-- `switch`
-- `throw`
-- `try`
-- `wait`
-- `while`
+*(Coverage based on real-world examples — let me know the missing ones.)*
 
+## Limits (web app)
 
-## Web app
+- Up to 20 archives / 50 MiB total per batch
+- Up to 500 generated files / 50 MiB of YAML
+- Nested IAR/CAR supported up to 3 levels
+- Trial valid through **January 31, 2027**
 
-The browser interface supports multiple IAR/CAR files, YAML previews, copy, individual downloads, and a ZIP containing all results. Use the Schema output dropdown to choose inline, catalog (default), sidecar, or omit. Sidecar catalogs are included as separate `.schemas.yaml` files in the results and ZIP. Errors and incomplete-reference warnings are displayed alongside the affected integration.
+## Trial & Support
 
-All parsing is processed in your browser. IARs/CARs stay on your device and are never uploaded.
+This project is under a trial license until **January 31, 2027**.  
+See [LICENSE](LICENSE).
 
+For licensing or support, contact [Jorge Herreria](https://www.linkedin.com/in/jherreria/).
 
-### Limits
-
-- Up to 20 selected archives, totaling less than 50 MiB per batch.
-- Up to 500 generated files and 50 MiB of generated YAML per batch.
-- Each archive is limited to 50,000 ZIP entries, 512 MiB of declared expanded data, and 64 MiB per entry, including nested archives.
-- Nested IAR/CAR files are supported through three nested levels. Symlinks, traversal paths, and duplicate ZIP paths are rejected.
-- The existing trial expires January 31, 2027. The same trial check applies to CLI, server, and browser conversion.
-
-Coverage is based on the supplied examples, not every possible Oracle® action or export variant. Mappings follow the existing compact representation: closing XML tags are omitted and indentation conveys hierarchy.
-
-
-
-## Trial and support
-
-This project uses the existing trial license, functional through **January 31, 2027**. See [LICENSE](LICENSE). Contact [Jorge Herreria](https://www.linkedin.com/in/jherreria/) for licensing and support.
+---
 
 © 2026 Jorge Herreria
