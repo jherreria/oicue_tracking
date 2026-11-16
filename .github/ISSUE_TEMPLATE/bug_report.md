@@ -18,8 +18,8 @@ Steps to reproduce if different than add the IAR/CAR and click `Converto to OICu
 **Expected behavior**
 What you expected to happen.
 
-**Screenshots / YAML output**
-- If possible, attach the IAR or CAR
+**Screenshots / YAML output, IAR/CAR**
+- If possible, attach the IAR or CAR.
 - If possible, attache the generated YAML or a screenshot.
 
 **Environment**
